@@ -1,0 +1,16 @@
+version: '3'
+services:
+ amit:
+  container_name: amit_app
+  build: .
+  ports:
+   - '80:80'
+  links:
+   - amit2
+ amit2:
+  container_name: amit_app2
+  image: nginx
+  ports:
+   - '3000:80'
+  
+
